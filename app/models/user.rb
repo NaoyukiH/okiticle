@@ -22,10 +22,10 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: { minimum: 6 }
 
+	
+
 
 	def feed
-		#このコードは準備段階です。
-		# 完全な実装は【11】「ユーザーをフォローする」を参照してください。
 		Micropost.from_users_followed_by(self)
 	end
 

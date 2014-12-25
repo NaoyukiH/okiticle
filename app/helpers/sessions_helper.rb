@@ -30,6 +30,12 @@ module SessionsHelper
     unless signed_in?
       store_location
       redirect_to signin_url, notice: "Please sign in." 
+      # これではエラーになった　→　redirect_to(signin_path), notice: "Please sign in." 
+      # 第2引数を取らない場合は、signin_url(可)、signin_path(可)、(signin_url)(可)、(signin_path)(可)
+      # 第2引数を取る場合は、signin_url(可)、signin_path(可)、(signin_url)(不可)、(signin_path)(不可)
+      
+      
+
      end
     end
 

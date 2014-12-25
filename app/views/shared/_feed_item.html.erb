@@ -6,6 +6,13 @@
 </span>
 
 <span class="content"><%= wrap(feed_item.content) %></span>
+
+
+ 
+ <%= image_tag feed_item.image %>
+
+ 
+
 <span class="timestamp">
 	Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
 </span>
