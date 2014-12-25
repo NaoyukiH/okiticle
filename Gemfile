@@ -24,7 +24,7 @@ gem 'turbolinks', '1.1.1'
 gem 'jbuilder', '1.0.2'
 
 gem 'carrierwave'
-# gem 'rmagick', '2.13.4'
+gem 'rmagick', '2.13.2'
 
 
 group :doc do
