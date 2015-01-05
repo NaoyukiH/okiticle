@@ -1,4 +1,4 @@
-<h1>Contact Us</h1>
+<h1>お問い合わせフォーム</h1>
 
 
 <div class= "row">
@@ -6,20 +6,20 @@
 <%= form_for(@contact) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
  
-  	<%= f.label :name %>
+  	<%= f.label :name, 'お名前' %>
   	<%= f.text_field :name %>
 
-  	<%= f.label :email %>
+  	<%= f.label :email, 'メールアドレス' %>
   	<%= f.text_field :email %>
 
   	
   	<div class="field">
-  	<%= f.label :content %>
-  	<%= f.text_area :content, placeholder: "Please write here" %>
+  	<%= f.label :content, 'お問い合わせ内容' %>
+  	<%= f.text_area :content, placeholder:""%>
     </div>
   
   
-  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+  <%= f.submit "送信", class: "btn btn-large btn-primary" %>
 <% end %>
  </div>
 </div>
