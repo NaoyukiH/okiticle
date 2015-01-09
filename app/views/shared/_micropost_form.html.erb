@@ -3,8 +3,14 @@
   <div class="field">
   	<%= f.text_area :content, placeholder: "コメント入力..." %>
   </div>
+   <div class="uploader"> 
+  	<div class="upload_image">
+  		画像アップロード
+  	</div> 
+
   <div class="image">
   	<%= f.file_field :image %>
+  </div>
   </div>
   <%= f.submit "投稿する", class: "btn btn-large btn-primary" %>
 <% end %>

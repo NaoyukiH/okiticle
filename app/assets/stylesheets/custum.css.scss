@@ -13,6 +13,10 @@ html {
 body {
   padding-top: 60px;
   background-color: white;
+  /* 背景画像をページ全体に適用させる方法は以下 */
+  /* background: url(MIYAKO8.png) repeat;
+  background-size: contain; */
+
 
 }
 
@@ -25,6 +29,9 @@ textarea {
 }
 
 
+.font24{
+  font-size:24px;
+}
 
 .center {
   text-align: center;
@@ -98,6 +105,8 @@ p {
     text-decoration: none;
   }
 }
+
+
 
 /* footer */
 
@@ -185,10 +194,10 @@ aside {
 }
 
 .stats {
-  overflow: auto;
+  overflow: auto; 
   a {
     float: left;
-    padding: 0 10px;
+    padding: 10px 10px;
     border-left: 1px solid #999999;
     color: black;
     &:first-child {
@@ -224,9 +233,11 @@ input, textarea, select, .uneditable-input {
 
 }
 
-input {
-  height: auto !important;
+　/* 画像ファイルボタン変更の為コメントアウト */
+  input {
+   height: auto !important;
 }
+
 
 
 #error_explanation {
@@ -248,7 +259,7 @@ input {
   list-style: none;
   margin: 0;
   li {
-    /*overflow: auto; */
+    /* overflow: auto; */ 
     float: left;
     width: 50%;
     padding: 10px 0;
@@ -293,6 +304,31 @@ aside {
   }
 }
 
+/* 画像アップロードボタン 
+#micropost_image { 
+  top:0;
+  left:0;
+  width:150px;
+  height:20px;
+  opacity:0;
+  position:absolute; 
+  margin-bottom: 10px;
+  }
 
 
+.uploader {
+  width:150px;
+  height:20px;
+  background-color: #111;
+  border: 1px solid #eee;
+  border-radius:5px;
+  position:relative;
+  margin-bottom: 10px;
+  } 
 
+.uploader .upload_image {
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+}
+*/
