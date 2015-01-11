@@ -26,7 +26,7 @@
   </div> 
 -->
 
-<div class="userpage">
+
     <aside class="user_info">
       <section>
         <%= render 'shared/user_info' %>
@@ -41,20 +41,20 @@
     </aside>
 
 
-    <div>
+    <div class="topfeed">
       <h3>最新記事</h3>
       <%= render 'shared/feed' %>
     </div>
-  </div> 
+
 
 
 <% else %>
 
 <div class="center hero-unit">
-  <h1>Welcome to <span id="apptitle">the Sample App</span></h1>
+  <h1>Welcome to <span id="apptitle">OKITICLE</span></h1>
 
   <h2>
-    This is the home page for the sample application.
+    沖縄のいろいろ。
   </h2>
 
   <%= link_to "今すぐ登録!", signup_path, class: "btn btn-large btn-primary" %>
