@@ -26,6 +26,9 @@ gem 'jbuilder', '1.0.2'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2'
 
+gem 'devise'
+gem 'omniauth-facebook'
+
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false

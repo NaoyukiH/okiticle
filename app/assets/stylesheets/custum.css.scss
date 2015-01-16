@@ -15,10 +15,9 @@ body {
   background-color: #aaa;
   /* 背景画像をページ全体に適用させる方法は以下 */
   background: url(photo333.jpg) repeat;
-  background-size: cover; 
+  background-size: contain; 
+  min-height: 1480px;
   
-
-
 }
 
 section {
@@ -65,7 +64,8 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-family: "ヒラギノ角ゴ Std","Hiragino Kaku Gothic Std";
+  font-family: "ヒラギノ角ゴ Std","Hiragino Kaku Gothic Std"; 
+  
 }
 
 h1 {
@@ -96,12 +96,14 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
+  margin-left: 100px;
   font-size: 1.7em;
   color: #A0522D;
   /* text-transform: uppercase; */
   letter-spacing: -1px;
   padding-top: 9px;
   font-family: "ヒラギノ角ゴ Std","Hiragino Kaku Gothic Std";
+
   font-weight: bold;
   line-height: 1;
   &:hover {
@@ -262,8 +264,9 @@ input, textarea, select, .uneditable-input {
 }
 
 　/* 画像ファイルボタン変更の為コメントアウト */
-  input {
+input {
    height: auto !important;
+   margin-bottom: 30px;
 }
 
 #error_explanation {
@@ -381,3 +384,8 @@ aside {
     color: white;
   }
 }
+
+.navbar-inverse .navbar-inner{
+  background: white;
+}
+
