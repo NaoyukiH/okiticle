@@ -77,4 +77,6 @@ SampleApp::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # config.omniauth :facebook, ENV['1609744735911797'], ENV['999bab7cf6b7e5f42da0d6183e174110']
 end

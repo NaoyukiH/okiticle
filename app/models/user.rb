@@ -22,8 +22,8 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: { minimum: 6 }
 
-	devise :registerable,
-         :omniauthable, omniauth_providers: [:facebook]
+	# devise :registerable,
+         # :omniauthable, omniauth_providers: [:facebook]
 
 
 	def feed
@@ -50,6 +50,20 @@ class User < ActiveRecord::Base
 	def User.encrypt(token)
 		Digest::SHA1.hexdigest(token.to_s)
 	end
+
+
+	def self.find_or_create_by_auth(auth)
+        user = User.where(["provider = ? and uid = ?", auth,provider, auth,uid])
+      if user.blank?
+       user = User.new
+       user.provider = auth.provider
+       user.uid = auth.uid
+       user.token = auth.credentials.token
+       user.save!
+      end
+      user
+    end
+
 
 	private
 

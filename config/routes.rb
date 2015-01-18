@@ -19,14 +19,24 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
-  devise_scope :user do
-  get 'sign_in',  to: 'users/sessions#new',     as: :new_user_session
-  get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
-  end
+# facebookのログイン・認証が完了した後のリダイレクト先(auth/facebook/callback)とsession#createを紐づけ
+  match 'auth/:provider/callback', to: 'session#create', via: [:get, :post]
 
-  devise_for :users, controllers: { 
-  omniauth_callbacks: "some_dir/omniauth_callbacks" }
+# facebookのログイン・認証が失敗した後のリダイレクト先(auth/failure)とrootを紐づけ
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+
+# signout_urlとsession#destroyを紐づけ
+  # match 'signout', to: 'session#destroy', as: 'signout', via: [:get, :post]
   
+# deviseを使う際のfacebookログイン認証機能用は以下。
+  # devise_scope :user do
+  # get 'sign_in',  to: 'users/sessions#new',     as: :new_user_session
+  # get 'sign_out', to: 'users/sessions#destroy', as: :destroy_user_session
+  # end
+
+  # devise_for :users, controllers: { 
+  # omniauth_callbacks: "some_dir/omniauth_callbacks" }
+#ここまで 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
