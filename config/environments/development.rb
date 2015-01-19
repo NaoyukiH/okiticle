@@ -39,8 +39,11 @@ SampleApp::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+#以下はfacebookログイン認証用でここに書くとメソッドエラーが出る。
+# OmniAuth.config.logger = Rails.logger
+# Rails.application.config.middleware.use OmniAuth::Builder do
   # config.omniauth :facebook, ENV['839547276112874'], ENV['0fe2c753a2f3d0106b164c986b9ef88d']
-
+# end
   
   
 end

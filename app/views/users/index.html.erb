@@ -1,7 +1,15 @@
 <%= provide(:title, 'All users') %>
+
+<%= form_tag users_path, :method => 'get' do %> 
+             <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :name => nil %>
+             </p>
+            <% end %> 
+
 <div class="container">
 <h1>登録ユーザー</h1>
-
+<%= @found_user.name %>
 
 <%= will_paginate %> 
 

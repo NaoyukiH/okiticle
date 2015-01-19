@@ -290,6 +290,10 @@ input {
 .users {
   list-style: none;
   margin: 0 0 20px 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 900px;
+
   li {
     /* overflow: auto; */
     float: left;
@@ -297,7 +301,7 @@ input {
     padding: 10px;
     border-top: 3px solid $grayLighter;
     
-    background-color: #333;
+    // background-color: #333;
     
   
     &:last-child {
