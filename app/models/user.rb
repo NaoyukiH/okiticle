@@ -68,7 +68,7 @@ class User < ActiveRecord::Base
     	if search
     	  User.where(['name LIKE ?', "%#{search}%"])
     	else
-    	  User.all
+    	  User.all # ここをrender 'index'に変えても入力なしの場合全user表示になってしまう。
     	end
     end
 
