@@ -9,10 +9,10 @@ class SessionsController < ApplicationController
 	   	sign_in user
 	   	redirect_back_or user
 
-	   elsif user = User.find_or_create_by_auth(auth)
-	   	auth = request.env["omniauth.auth"]
-       session[:user_id] = user.id
-       redirect_back_or user
+	   # elsif user = User.find_or_create_by_auth(auth)
+	   # 	auth = request.env["omniauth.auth"]
+    #    session[:user_id] = user.id
+    #    redirect_back_or user
 
 	   else
        flash.now[:error] = 'Invalid email/password combination'

@@ -66,9 +66,11 @@ class User < ActiveRecord::Base
 
     def self.search(search)
     	if search
-    	  User.where(['name LIKE ?', "%#{search}%"])
+    	  # User.where(['name LIKE ?', "%#{search}%"])
+    	  find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
     	else
     	  User.all # ここをrender 'index'に変えても入力なしの場合全user表示になってしまう。
+    	  # redirect_to 'index'
     	end
     end
 
