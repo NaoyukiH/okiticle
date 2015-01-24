@@ -1,0 +1,38 @@
+
+<%= form_tag search_path, :method => 'get' do %> 
+   <p>
+     <%= text_field_tag :search, params[:search] %>
+     <%= submit_tag "Search", :name => nil %>
+   </p>
+<% end %> 
+
+
+
+ <ul class= "users">
+<% @found_user.each do |found| %>
+
+<!-- 下のコードだとエラー出る -->
+<!-- <li><%#= found.micropost %></li> -->
+<li>
+ <%= gravatar_for found, size: 52 %>
+ <%= link_to found.name, found %>
+ <% if current_user.admin? && !current_user?(found) %>
+     <%= link_to "delete", found, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+ <% end %>
+</li>
+<% end %>
+</ul> 
+
+
+<!-- <tbody>
+    <#% @request.each do |user| %>
+      <tr>
+        <td><#%= user.name %></td>
+        <td><#%= user.email %></td>
+             </tr>
+    <#% end %>
+  </tbody>
+ -->
+
+

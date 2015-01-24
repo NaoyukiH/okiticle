@@ -19,14 +19,17 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
 
-# facebookのログイン・認証が完了した後のリダイレクト先(auth/facebook/callback)とsession#createを紐づけ
-  match 'auth/:provider/callback', to: 'session#create', via: [:get, :post]
+# facebookのログイン・認証が完了した後のリダイレクト先(auth/facebook/callback)とsessions#createを紐づけ
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 
 # facebookのログイン・認証が失敗した後のリダイレクト先(auth/failure)とrootを紐づけ
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
 # signout_urlとsession#destroyを紐づけ
   # match 'signout', to: 'session#destroy', as: 'signout', via: [:get, :post]
+
+  match '/search', to: 'users#search', via: 'get' 
+
   
 # deviseを使う際のfacebookログイン認証機能用は以下。
   # devise_scope :user do

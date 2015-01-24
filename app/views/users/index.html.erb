@@ -1,21 +1,12 @@
 <%= provide(:title, 'All users') %>
 
-<%= form_tag users_path, :method => 'get' do %> 
+<%= form_tag search_path, :method => 'get' do %> 
    <p>
      <%= text_field_tag :search, params[:search] %>
      <%= submit_tag "Search", :name => nil %>
    </p>
 <% end %> 
 
-
-
- <ul>
-<% @found_user.each do |found| %>
-<li><%= found.name %></li>
-<!-- 下のコードだとエラー出る -->
-<!-- <li><%#= found.micropost %></li> -->
-<% end %>
-</ul> 
 
 
 <!-- <tbody>

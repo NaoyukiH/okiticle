@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page]) 
-    @found_user = User.search(params[:search])
+    # @found_user = User.search(params[:search])
   end
 
 
@@ -70,6 +70,11 @@ class UsersController < ApplicationController
     @users = @user.followers.paginate(page: params[:page])
     render 'show_follow'
   end
+
+  def search
+    @found_user = User.search(params[:search])
+  end
+
 
 
 
