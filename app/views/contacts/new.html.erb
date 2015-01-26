@@ -1,9 +1,10 @@
 <div class="container">
 <h1>お問い合わせフォーム</h1>
 
-
+<div class="contactfooter">
 <div class= "row">
  <div class= "span6 offset3">
+
 <%= form_for(@contact) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
  
@@ -22,6 +23,7 @@
   
   <%= f.submit "送信", class: "btn btn-large btn-primary" %>
 <% end %>
+</div>
  </div>
 </div>
 </div>
