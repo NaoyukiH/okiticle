@@ -4,29 +4,30 @@
 
 <div class="editfooter">
 <div class= "row">
-  <div class= "span6 offset3">
-  	<%= form_for(@user) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
+<div class= "span6 offset3">
 
-  	  <%= f.label :name, 'お名前'%>
-  	  <%= f.text_field :name %>
+<%= form_for(@user) do |f| %>
 
-  	  <%= f.label :email, 'メールアドレス' %>
-  	  <%= f.text_field :email %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.label :name, 'お名前'%>
+  <%= f.text_field :name %>
 
-  	  <%= f.label :password, 'パスワード' %>
-  	  <%= f.password_field :password %>
+  <%= f.label :email, 'メールアドレス' %>
+  <%= f.text_field :email %>
 
-  	  <%= f.label :password_confirmation, "パスワード(確認用)" %>
-  	  <%= f.password_field :password_confirmation %>
+  <%= f.label :password, 'パスワード' %>
+  <%= f.password_field :password %>
 
-  	  <%= f.submit "更新", class: "btn btn-large btn-primary" %>
+  <%= f.label :password_confirmation, "パスワード(確認用)" %>
+  <%= f.password_field :password_confirmation %>
 
-  	<% end %>
+  <%= f.submit "更新", class: "btn btn-large btn-primary" %>
 
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails" target="_blank" %>画像変更</a>
-  </div>
+<% end %>
+
+<%= gravatar_for @user %>
+<a href="http://gravatar.com/emails" target="_blank" %>画像変更</a>
+</div>
 </div>
 </div>
 </div>
