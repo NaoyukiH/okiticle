@@ -3,8 +3,8 @@
 <h1>登録ユーザー</h1>
 
 
-<%= will_paginate %> 
-
+<!-- <%#= will_paginate %> -->
+<div id="users_page">
 <div id="users_back">
 <ul class= "users" >
   <% @users.each do |foo| %>
@@ -15,4 +15,5 @@
 </div>
 
 <%= will_paginate %>
+</div>
 </div>

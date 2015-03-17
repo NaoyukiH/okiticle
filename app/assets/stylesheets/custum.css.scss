@@ -16,8 +16,7 @@ body {
   /* 背景画像をページ全体に適用させる方法は以下 */
   background: url(photo333.jpg) repeat;
   background-size: contain; 
-  min-height: 1480px;
-  
+  min-height: 1480px;  
 }
 
 section {
@@ -54,11 +53,9 @@ textarea {
 }
 
 #apptitle{
-
   font-size: 60px;
   color: #8B4513;
-
-  }
+}
 
 
 
@@ -66,8 +63,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  font-family: "ヒラギノ角ゴ Std","Hiragino Kaku Gothic Std"; 
-  
+  font-family: "ヒラギノ角ゴ Std","Hiragino Kaku Gothic Std";  
 }
 
 h1 {
@@ -128,9 +124,9 @@ footer {
 
 
   a {
-    color: $gray;
+    color: #333;
     &:hover {
-      color: $grayDarker;
+      color: black;
     }
   }
   small {
@@ -200,7 +196,6 @@ aside {
       width: 300px;
     }
 
-
     span {
       display: block;
       margin-bottom: 3px;
@@ -212,7 +207,6 @@ aside {
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
-
     }
   }
 }
@@ -224,7 +218,6 @@ aside section h1{
 .gravatar {
   float: left;
   margin-right: 10px;
-
 }
 
 .stats {
@@ -266,7 +259,6 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
-
 }
 
 　/* 画像ファイルボタン変更の為コメントアウト */
@@ -302,8 +294,7 @@ input {
     padding: 10px;
     border-top: 3px solid $grayLighter;
     background-color: #333;
-    
-  
+     
     &:last-child {
       border-bottom: 1px solid $grayLighter;
     }
@@ -319,24 +310,20 @@ input {
   margin: 10px 0 0 0;
   overflow: auto; 
   width: 100%;
-
-
- li {
-  padding: 10px 10px 10px 0;
-  border-top: 1px solid #999999; 
-  /* border-top: 1px  solid #bbb; */
-  margin-bottom: 20px;
-  width: 450px;
-  float: left;
-
- }
-img {
-  margin-top: 10px;
-}
-img.gravatar {
-  margin-top: 0px;
-}
- 
+  li {
+    padding: 10px 10px 10px 0;
+    border-top: 1px solid #999999; 
+    /* border-top: 1px  solid #bbb; */
+    margin-bottom: 20px;
+    width: 450px;
+    float: left;
+  }
+  img {
+    margin-top: 10px;
+  }
+  img.gravatar {
+    margin-top: 0px;
+  } 
 }
 
 
@@ -350,12 +337,14 @@ img.gravatar {
   float: left;
   margin-right: 10px;
 }
+
 aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
   }
 }
+
 
 /* 画像アップロードボタン */
 #micropost_image { 
@@ -367,7 +356,6 @@ aside {
   position:absolute; 
   margin-bottom: 10px;
   }
-
 
 .uploader {
   width:150px;
@@ -389,7 +377,6 @@ aside {
   width: 1434px;
   background: #333;
   padding: 5px 10px 3px 10px;
-
   
   li {
     width: 447px;
@@ -412,19 +399,19 @@ aside {
 .about {
   margin-bottom: 255px;
 }
+
 .about > h2 {
   // color: #EA4E31;
-  color: #007B50;
-  
+  color: #007B50;  
 }
 
 #plus {
   color: black;
 }
+
 #article {
   color: #007BC3;
 }
-
 
 .helpfooter {
   margin-bottom: 385px;
@@ -433,6 +420,21 @@ aside {
 .contactfooter {
   margin-bottom: 132px;
 }
+
 .editfooter {
   margin-bottom: 105px;
+}
+
+.span6 ol {
+  background-color: #333;
+  padding: 0 10px 0 15px;
+  color: white;
+  border-radius:5px 5px 5px 0 ;
+}
+
+.span6 .pagination {
+  margin: 0 190px 0 0;
+  padding: 0 20px 5px 10px;
+  background: #333;
+  border-radius:0 0 5px 5px;
 }
